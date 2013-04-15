@@ -22,6 +22,7 @@ compile '*' do
     # don’t filter binary items
   else
     filter :erb
+    filter :kramdown
     layout 'default'
   end
 end
@@ -42,10 +43,30 @@ end
 
 layout '*', :erb
 
-preprocess do
-  source_file = File.open('./the-tachypomp-and-other-stories.txt')
-  
-  puts 'woot'
-end  
+# preprocess do
+#   
+#   class BookBuilder
+#     
+#     def self.process(filename)
+#       dsl = new
+#       dsl.instance_eval(File.read(filename))
+#     end
+#       
+#     def discard(text)
+#       
+#     end
+#     
+#     def index(text)
+#       File.open('./content/index.html', 'w') do |file|
+#         file.write(text)
+#       end
+#     end 
+#   end      
+#   
+#   BookBuilder.process('./the-tachypomp-and-other-stories.txt')
+#   
+#   #BookBuilder.process('./test.txt')
+# 
+# end  
   
 

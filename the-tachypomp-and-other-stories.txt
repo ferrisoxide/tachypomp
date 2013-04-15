@@ -1,4 +1,4 @@
-
+index(<<-EOT)
 Title: The Tachypomp and Other Stories
 Author: Edward Page Mitchell
 * A Project Gutenberg of Australia eBook *
@@ -28,19 +28,21 @@ http://gutenberg.net.au/licence.html
 
 To contact Project Gutenberg of Australia go to http://gutenberg.net.au
 
-
 The Tachypomp and Other Stories
 Edward Page Mitchell
+EOT
 
-
-THE TACHYPOMPTHE SOUL SPECTROSCOPE
+toc(<<-EOT)
+THE TACHYPOMP
+THE SOUL SPECTROSCOPE
 THE MAN WITHOUT A BODY
 THE ABLEST MAN IN THE WORLD
 THE SENATOR'S DAUGHTER
 THE CRYSTAL MAN
 THE CLOCK THAT WENT BACKWARD
+EOT
 
-
+section(<<-EOT)
 THE TACHYPOMP
 
 A Mathematical Demonstration
@@ -444,7 +446,7 @@ night. But stop! Have you the money--das Geld?"
 
 "Good! Let us strike hands. Gold and Knowledge; Science and Love. What
 may not such a partnership achieve? We go to conquer thee, Abscissa.
-Vorwärts!"
+VorwÃ¤rts!"
 
 When, at the end of a fortnight; I sought Rivarol's chamber, I passed
 with some little trepidation over the terminus of the Air Line to
@@ -672,9 +674,9 @@ husband."
 
 Still I can see no reason why the Tachypomp should not have succeeded.
 Can you?
+EOT
 
-
-
+section(<<-EOT)
 THE SOUL SPECTROSCOPE
 
 The Singular Materialism of a Progressive Thinker
@@ -884,7 +886,9 @@ Having bid the professor farewell and wished him abundant success in
 his very interesting experiments, I went home and read again for the
 thirty-ninth time Professor Tyndall's address at Belfast.
 
+EOT
 
+section(<<-EOT)
 
 THE MAN WITHOUT A BODY
 
@@ -1196,8 +1200,9 @@ issued forth from the old arsenal into the fresh night air and the
 moonlight, and wandered arm in arm along the shores of the quiet lake
 and through the mazy paths of the Ramble.
 
+EOT
 
-
+section(<<-EOT)
 THE ABLEST MAN IN THE WORLD
 
 I
@@ -1236,7 +1241,7 @@ to the play. Few excursionists disturbed the meditations of the
 shriveled old custodian of the tower on the Mercuriusberg. Fisher
 found the place very stupid--as stupid as Saratoga in June or Long
 Branch in September. He was impatient to get to Switzerland, but his
-wife had contracted a table d'hôte intimacy with a Polish countess,
+wife had contracted a table d'hÃ´te intimacy with a Polish countess,
 and she positively refused to take any step that would sever so
 advantageous a connection.
 
@@ -1410,13 +1415,13 @@ return."
 Then Fisher discovered that even a Polish countess has her uses in the
 social economy.
 
-Mrs. Fisher's table d'hôte friend was amiability itself, when
+Mrs. Fisher's table d'hÃ´te friend was amiability itself, when
 approached by Fisher (through Fisher's wife) on the subject of the
 Baron Savitch of Moscow. Know anything about the Baron Savitch? Of
 course she did, and about everybody else worth knowing in Europe.
 Would she kindly communicate her knowledge? Of course she would, and
 be enchanted to gratify in the slightest degree the charming curiosity
-of her Americaine. It was quite refreshing for a blasée old woman, who
+of her Americaine. It was quite refreshing for a blasÃ©e old woman, who
 had long since ceased to feel much interest in contemporary men,
 women, things and events, to encounter one so recently from the
 boundless prairies of the new world as to cherish a piquant
@@ -1711,7 +1716,7 @@ the inevitable result with the tranquillity of a philosopher.
 "Monsieur, you have my secret. That is precisely what I have done. In
 Moscow, where my friend Dr. Duchat had charge of the new institution
 of St. Vasili for hopeless idiots, I found a boy of eleven whom they
-called Stépan Borovitch. Since he was born, he had not seen, heard,
+called StÃ©pan Borovitch. Since he was born, he had not seen, heard,
 spoken or thought. Nature had granted him, it was believed, a fraction
 of the sense of smell, and perhaps a fraction of the sense of taste,
 but of even this there was no positive ascertainment. Nature had
@@ -1724,13 +1729,13 @@ mumbling forth his satisfaction at the warmth in the plaintive and
 unvarying refrain of idiocy. The boy was thus situated when I first
 saw him.
 
-"I begged Stépan Borovitch of my good friend Dr. Duchat. If that
+"I begged StÃ©pan Borovitch of my good friend Dr. Duchat. If that
 excellent man had not long since died he should have shared in my
-triumph. I took Stépan to my home and plied the saw and the knife. I
+triumph. I took StÃ©pan to my home and plied the saw and the knife. I
 could operate on that poor, worthless, useless, hopeless travesty of
 humanity as fearlessly and as recklessly as upon a dog bought or
 caught for vivisection. That was a little more than twenty years ago.
-To-day Stépan Borovitch wields more power than any other man on the
+To-day StÃ©pan Borovitch wields more power than any other man on the
 face of the earth. In ten years he will be the autocrat of Europe, the
 master of the world. He never errs; for the machine that reasons
 beneath his silver skull never makes a mistake."
@@ -1925,7 +1930,7 @@ replaced the skullcap and the wig.
 
 All this was done before the servant answered the bell. "The Baron
 Savitch is ill," said Fisher to the attendant, when he came. "There is
-no cause for alarm. Send at once to the Hotel de l'Athénée for his
+no cause for alarm. Send at once to the Hotel de l'AthÃ©nÃ©e for his
 valet, Auguste." In twenty seconds Fisher was in a cab, whirling
 toward the Station St. Lazare.
 
@@ -1956,8 +1961,9 @@ the Baron Savitch."
 Miss Ward burst into a ringing laugh. "You are sometimes too droll,
 Mr. Fisher," she said.
 
+EOT
 
-
+section(<<-EOT)
 THE SENATOR'S DAUGHTER
 
 I  THE SMALL GOLD BOX
@@ -2274,7 +2280,7 @@ hand in his, began to speak deliberately and earnestly.
 
 "Clara," he said, "I am going to ask you for a final proof of your
 affection. Do not start and look alarmed, but hear me patiently. If,
-after hearing me, you still bid me bring you a pâté, or the wing of a
+after hearing me, you still bid me bring you a pÃ¢tÃ©, or the wing of a
 fowl, or a salad, or even a plate of fruit, I will do so, though it
 wrench the heart in my bosom. But first listen to what I have to say."
 
@@ -2714,9 +2720,9 @@ turned away sobbing.
 
 A moment later the intense cold of the congealing chamber caught the
 bride and wrapped her close in its icy embrace.
+EOT
 
-
-
+section(<<-EOT)
 THE CRYSTAL MAN
 
 Rapidly turning into the Fifth Avenue from one of the cross streets
@@ -2972,16 +2978,16 @@ hematin and the melanin, together with the greenish-yellow biliverdine
 and the reddish-yellow urokacine, are the pigments which impart color
 character to tissues otherwise transparent, or nearly so. I deplore my
 inability to record the result of some highly interesting histological
-experiments conducted by that indefatigable investigator Fröliker in
+experiments conducted by that indefatigable investigator FrÃ¶liker in
 achieving success in the way of separating pink discoloration of the
 human body by chemical means.
 
 "For five years," continued my unseen companion when I had finished
-reading, "I was Fröliker's student and laboratory assistant at
+reading, "I was FrÃ¶liker's student and laboratory assistant at
 Freiburg. Bussius only half guessed at the importance of our
 experiments. We reached results which were so astounding that public
 policy required they should not be published, even to the scientific
-world. Fröliker died a year ago last August.
+world. FrÃ¶liker died a year ago last August.
 
 "I had faith in the genius of this great thinker and admirable man. If
 he had rewarded my unquestioning loyalty with full confidence, I
@@ -3008,7 +3014,7 @@ The voice paused, and in a few seconds a hand bell upon the mantel was
 sounded. Presently an old man with a close-fitting skullcap shuffled
 into the room.
 
-"Käspar," said the voice, in German, "show the gentleman your hair."
+"KÃ¤spar," said the voice, in German, "show the gentleman your hair."
 
 Without manifesting any surprise, and as if perfectly accustomed to
 receive commands addressed to him out of vacancy, the old domestic
@@ -3016,12 +3022,12 @@ bowed and removed his cap. The scanty locks thus discovered were of a
 lustrous emerald green. I expressed my astonishment.
 
 "The gentleman finds your hair very beautiful," said the voice, again
-in German. "That is all, Käspar."
+in German. "That is all, KÃ¤spar."
 
 Replacing his cap, the domestic withdrew, with a look of gratified
 vanity on his face.
 
-"Old Käspar was Fröliker's servant, and is now mine. He was the
+"Old KÃ¤spar was FrÃ¶liker's servant, and is now mine. He was the
 subject of one of our first applications of the process. The worthy
 man was so pleased with the result that he would never permit us to
 restore his hair to its original red. He is a faithful soul, and my
@@ -3037,11 +3043,11 @@ altogether from the system by absorption, exudation, and the use of
 the chlorides and other chemical agents acting on organic matter. He
 was only too successful!
 
-"Again I was the subject of experiments which Fröliker supervised,
+"Again I was the subject of experiments which FrÃ¶liker supervised,
 imparting to me only so much of the secret of this process as was
 unavoidable. For weeks at a time I remained in his private laboratory,
 seeing no one and seen by no one excepting the professor and the
-trustworthy Käspar. Herr Friiliker proceeded with caution, closely
+trustworthy KÃ¤spar. Herr Friiliker proceeded with caution, closely
 watching the effect of each new test, and advancing by degrees. He
 never went so far in one experiment that he was unable to withdraw at
 discretion. He always kept open an easy road for retreat. For that
@@ -3064,8 +3070,8 @@ later I was more than translucent. You have seen floating those sea
 radiates, the medusa or jellyfish, their outlines almost invisible to
 the eye. Well, I became in the air like a jellyfish in the water.
 Almost perfectly transparent, it was only by close inspection that old
-Käspar could discover my whereabouts in the room when he came to bring
-me food. It was Käspar who ministered to my wants at times when I was
+KÃ¤spar could discover my whereabouts in the room when he came to bring
+me food. It was KÃ¤spar who ministered to my wants at times when I was
 cloistered."
 
 "But your clothing?" I inquired, interrupting Flack's narrative. "That
@@ -3090,7 +3096,7 @@ Schwarzwald to recuperate. I first saw and admired Pandora at the
 little village of St. Blasien. They had come from the Falls of the
 Rhine, and were traveling north; I turned around and traveled north.
 At the Stern Inn I loved Pandora; at the summit of the Feldberg I
-madly worshiped her. In the Höllenpass I was ready to sacrifice my
+madly worshiped her. In the HÃ¶llenpass I was ready to sacrifice my
 life for a gracious word from her lips. On Hornisgrinde I besought her
 permission to throw myself from the top of the mountain into the
 gloomy waters of the Mummelsee in order to prove my devotion. You know
@@ -3114,9 +3120,9 @@ grin, 'I shall be pleased to see you at my office in Broad street' He
 carried Pandora off to Paris, and I returned to Freiburg.
 
 "A few weeks later, one bright afternoon in August, I stood in
-Fröliker's laboratory unseen by four persons who were almost within
-the radius of my arm's length. Käspar was behind me, washing some test
-tubes. Fröliker, with a proud smile upon his face, was gazing intently
+FrÃ¶liker's laboratory unseen by four persons who were almost within
+the radius of my arm's length. KÃ¤spar was behind me, washing some test
+tubes. FrÃ¶liker, with a proud smile upon his face, was gazing intently
 at the place where he knew I ought to be. Two brother professors,
 summoned on some pretext, were unconsciously almost jostling me with
 their elbows as they discussed I know not what trivial question. They
@@ -3124,7 +3130,7 @@ could have heard my heart beat. 'By the way, Herr Professor,' one
 asked as he was about to depart, 'has your assistant, Herr Flack,
 returned from his vacation?' This test was perfect.
 
-"As soon as we were alone, Professor Fröliker grasped my invisible
+"As soon as we were alone, Professor FrÃ¶liker grasped my invisible
 hand, as you have grasped it tonight. He was in high spirits.
 
 "'My dear fellow,' he said, 'tomorrow crowns our work. You shall
@@ -3140,7 +3146,7 @@ Paris to seek her with fame in your hands and the blessings of science
 on your head.'
 
 "The next morning, the nineteenth of August, before I had arisen from
-my cot bed, Käspar hastily entered the laboratory.
+my cot bed, KÃ¤spar hastily entered the laboratory.
 
 "'Herr Flack! Herr Flack!' he gasped, 'the Herr Doctor Professor is
 dead of apoplexy.'"
@@ -3175,7 +3181,7 @@ Flack sprang to his feet. His two hands had my shoulders in a fierce
 grip.
 
 "Yes," I continued; "Pandora has been faithful to your memory. There
-is no reason to despair. The secret of Fröliker's process died with
+is no reason to despair. The secret of FrÃ¶liker's process died with
 him, but why should it not be rediscovered by experiment and induction
 ab initio, with the aid which you can render? Have courage and hope.
 She loves you. In five minutes you shall hear it from her own lips."
@@ -3227,7 +3233,7 @@ annoyance."
 "Your heart is quartz," I whispered, as she passed me in going out.
 "You are unworthy of him."
 
-Flack's despairing cry brought Käspar into the room. With the instinct
+Flack's despairing cry brought KÃ¤spar into the room. With the instinct
 acquired by long and faithful service, the old man went straight to
 the place where his master was. I saw him clutch at the air, as if
 struggling with and seeking to detain the invisible man. He was flung
@@ -3235,27 +3241,27 @@ violently aside. He recovered himself and stood an instant listening,
 his neck distended, his face pale. Then he rushed out of the door and
 down the stairs. I followed him.
 
-The street door of the house was open. On the sidewalk Käspar
+The street door of the house was open. On the sidewalk KÃ¤spar
 hesitated a few seconds. It was toward the west that he finally
 turned, running down the street with such speed that I had the utmost
 difficulty to keep at his side.
 
 It was near midnight. We crossed avenue after avenue. An inarticulate
-murmur of satisfaction escaped old Käspar's lips. A little way ahead
+murmur of satisfaction escaped old KÃ¤spar's lips. A little way ahead
 of us we saw a man, standing at one of the avenue corners, suddenly
 thrown to the ground. We sped on, never relaxing our pace. I now heard
-rapid footfalls a short distance in advance of us. I clutched Käspar's
+rapid footfalls a short distance in advance of us. I clutched KÃ¤spar's
 arm. He nodded.
 
 Almost breathless, I was conscious that we were no longer treading
 upon pavement, but on boards and amid a confusion of lumber. In front
-of us were no more lights; only blank vacancy. Käspar gave one mighty
+of us were no more lights; only blank vacancy. KÃ¤spar gave one mighty
 spring. He clutched, missed, and fell back with a cry of horror.
 
 There was a dull splash in the black waters of the river at our feet.
+EOT
 
-
-
+section(<<-EOT)
 THE CLOCK THAT WENT BACKWARD
 
 A row of Lombardy poplars stood in front of my great-aunt Gertrude's
@@ -3821,5 +3827,7 @@ was the silent clock.
 
 
 THE END
+
+EOT
 
 

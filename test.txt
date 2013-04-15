@@ -1,3 +1,4 @@
+frontpage(<<-FRONTPAGE)
 Title: The Tachypomp and Other Stories
 Author: Edward Page Mitchell
 * A Project Gutenberg of Australia eBook *
@@ -27,5 +28,11 @@ http://gutenberg.net.au/licence.html
 
 To contact Project Gutenberg of Australia go to http://gutenberg.net.au
 
+FRONTPAGE
+
+discard(<<-DISCARD)
+
 The Tachypomp and Other Stories
 Edward Page Mitchell
+
+DISCARD

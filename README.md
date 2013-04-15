@@ -1,0 +1,1 @@
+NOTE: Need to save source file in UTF-8 format to remove invalid multibyte char (UTF-8)
