@@ -1,0 +1,159 @@
+Crashlog created at 2013-04-15 20:01:05 +0930
+
+===== MESSAGE:
+
+Errno::ENOENT: No such file or directory - ../the-tachypomp-and-other-stories.txt
+
+===== COMPILATION STACK:
+
+  (empty)
+
+===== STACK TRACE:
+
+  0. ./Rules:46:in `initialize'
+  1. ./Rules:46:in `open'
+  2. ./Rules:46:in `block in load'
+  3. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/base/compilation/compiler.rb:197:in `instance_eval'
+  4. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/base/compilation/compiler.rb:197:in `preprocess'
+  5. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/base/compilation/compiler.rb:120:in `load'
+  6. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/base/source_data/site.rb:250:in `load'
+  7. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli/command_runner.rb:63:in `load_site'
+  8. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli/commands/compile.rb:319:in `run'
+  9. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  10. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  11. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  12. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli/command_runner.rb:13:in `call'
+  13. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `block in runner'
+  14. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
+  15. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
+  16. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
+  17. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/cri-2.3.0/lib/cri/command.rb:262:in `run'
+  18. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli.rb:52:in `block in run'
+  19. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  20. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  21. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib/nanoc/cli.rb:50:in `run'
+  22. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/bin/nanoc:19:in `<top (required)>'
+  23. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/bin/nanoc:19:in `load'
+  24. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/bin/nanoc:19:in `<main>'
+  25. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/bin/ruby_noexec_wrapper:14:in `eval'
+  ... 28 more lines omitted. See full crash log for details.
+
+===== VERSION INFORMATION:
+
+nanoc 3.6.2 © 2007-2013 Denis Defreyne.
+Running ruby 1.9.3 (2013-02-22) on x86_64-darwin11.4.2 with RubyGems 1.8.25.
+
+===== SYSTEM INFORMATION:
+
+Darwin Toms-MacBook-Pro.local 11.4.2 Darwin Kernel Version 11.4.2: Thu Aug 23 16:25:48 PDT 2012; root:xnu-1699.32.7~1/RELEASE_X86_64 x86_64
+
+===== INSTALLED GEMS:
+
+  adsf 1.1.1
+  bundler 1.3.1
+  colored 1.2
+  cri 2.3.0
+  maruku 0.6.1
+  nanoc 3.6.2
+  rack 1.5.2
+  syntax 1.0.0
+  systemu 2.5.2
+
+===== ENVIRONMENT:
+
+Apple_PubSub_Socket_Render => "/tmp/launch-EkOxfp/Render"
+Apple_Ubiquity_Message => "/tmp/launch-kDKbAA/Apple_Ubiquity_Message"
+BUNDLE_BIN_PATH => "/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@global/gems/bundler-1.3.1/bin/bundle"
+BUNDLE_GEMFILE => "/Users/tomtuddenhampersonal/projects/tachypomp/Gemfile"
+COMMAND_MODE => "unix2003"
+DISPLAY => "/tmp/launch-kSxF9d/org.x:0"
+GEM_HOME => "/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp"
+GEM_PATH => "/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp:/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@global"
+HOME => "/Users/tomtuddenhampersonal"
+IRBRC => "/Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/.irbrc"
+LANG => "en_AU.UTF-8"
+LOGNAME => "tomtuddenhampersonal"
+MY_RUBY_HOME => "/Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392"
+OLDPWD => "/Users/tomtuddenhampersonal/projects"
+PATH => "/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/bin:/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/tomtuddenhampersonal/.rvm/bin:/usr/local/share/python:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+PWD => "/Users/tomtuddenhampersonal/projects/tachypomp"
+RUBYOPT => "-I/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@global/gems/bundler-1.3.1/lib -rbundler/setup"
+RUBY_VERSION => "ruby-1.9.3-p392"
+SHELL => "/bin/bash"
+SHLVL => "1"
+SSH_AUTH_SOCK => "/tmp/launch-V2tbcr/Listeners"
+TERM => "xterm-color"
+TERM_PROGRAM => "Apple_Terminal"
+TERM_PROGRAM_VERSION => "303.2"
+TERM_SESSION_ID => "CBB9CC5A-2333-4EA5-B850-65D6C086EAEC"
+TMPDIR => "/var/folders/xc/dmxhx6js0fj40b23gygxp2h80000gt/T/"
+USER => "tomtuddenhampersonal"
+_ => "/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/bin/nanoc"
+_ORIGINAL_GEM_PATH => "/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp:/Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@global"
+__CF_USER_TEXT_ENCODING => "0x1FA:0:0"
+__array_start => "0"
+_first => "0"
+_second => "1"
+escape_flag => "1"
+install_flag => "1"
+rvm_bin_path => "/Users/tomtuddenhampersonal/.rvm/bin"
+rvm_debug_clr => "\e[35m"
+rvm_delete_flag => "0"
+rvm_error_clr => "\e[31m"
+rvm_notify_clr => "\e[32m"
+rvm_path => "/Users/tomtuddenhampersonal/.rvm"
+rvm_prefix => "/Users/tomtuddenhampersonal"
+rvm_recommended_ruby => "rvm install ruby-1.9.3-p0"
+rvm_reset_clr => "\e[m"
+rvm_ruby_string => "ruby-1.9.3-p392"
+rvm_sticky_flag => "1"
+rvm_version => "1.18.15 (stable)"
+rvm_warn_clr => "\e[33m"
+
+===== GEMFILE.LOCK:
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    adsf (1.1.1)
+      rack (>= 1.0.0)
+    colored (1.2)
+    cri (2.3.0)
+      colored (>= 1.2)
+    maruku (0.6.1)
+      syntax (>= 1.0.0)
+    nanoc (3.6.2)
+      cri (~> 2.3)
+    rack (1.5.2)
+    syntax (1.0.0)
+    systemu (2.5.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adsf
+  maruku
+  nanoc
+  systemu
+
+===== LOAD PATHS:
+
+  0. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib
+  1. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/systemu-2.5.2/lib
+  2. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/nanoc-3.6.2/lib
+  3. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/maruku-0.6.1/lib
+  4. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/syntax-1.0.0/lib
+  5. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/cri-2.3.0/lib
+  6. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/colored-1.2/lib
+  7. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/adsf-1.1.1/lib
+  8. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@tachypomp/gems/rack-1.5.2/lib
+  9. /Users/tomtuddenhampersonal/.rvm/gems/ruby-1.9.3-p392@global/gems/bundler-1.3.1/lib
+  10. /Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/site_ruby/1.9.1
+  11. /Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/site_ruby/1.9.1/x86_64-darwin11.4.2
+  12. /Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/site_ruby
+  13. /Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/vendor_ruby/1.9.1
+  14. /Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/vendor_ruby/1.9.1/x86_64-darwin11.4.2
+  15. /Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/vendor_ruby
+  16. /Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1
+  17. /Users/tomtuddenhampersonal/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/x86_64-darwin11.4.2
