@@ -3,10 +3,12 @@ GEM
   specs:
     adsf (1.1.1)
       rack (>= 1.0.0)
+    breakdown (0.0.1)
     colored (1.2)
     cri (2.3.0)
       colored (>= 1.2)
     kramdown (1.0.1)
+    mime-types (1.22)
     nanoc (3.6.2)
       cri (~> 2.3)
     rack (1.5.2)
@@ -17,6 +19,8 @@ PLATFORMS
 
 DEPENDENCIES
   adsf
+  breakdown
   kramdown
+  mime-types
   nanoc
   systemu
