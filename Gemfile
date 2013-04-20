@@ -8,4 +8,4 @@ gem 'systemu' # NOTE used when deploying via rsync
 gem 'mime-types' # NOTE required for nanoc autocompile
 #gem 'eeepub' # NOTE not using just yet
 
-gem 'breakdown'
+gem 'breakdown', :git => 'git@github.com:ferrisoxide/breakdown.git'
