@@ -26,6 +26,7 @@ require 'compass'
 require 'zurb-foundation'
 #require 'faker'
 
+# NOTE: don't need all these - copied over from nanoc-blog template project
 include Nanoc::Helpers::Blogging
 include Nanoc::Helpers::Tagging
 include Nanoc::Helpers::Rendering
