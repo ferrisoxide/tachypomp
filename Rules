@@ -13,8 +13,30 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
-  # don’t filter or layout
+# Styling and Javascript Asset Rules
+compile '/assets/stylesheets/*/' do
+  filter :sass, Compass.sass_engine_options
+end
+
+compile '/assets/javascripts/*' do
+  filter :erb
+  filter :concat_js
+  if ENV['NANOC_ENV'] == 'production'
+    filter :uglify_js
+  end
+end
+
+## Do not write partials
+route '/assets/stylesheets/_*/' do
+  nil
+end
+
+route '/assets/stylesheets/*/' do
+  item.identifier.chop + '.css'
+end
+
+route '/assets/javascripts/*' do
+  item.identifier.chop + '.js'
 end
 
 compile '*' do

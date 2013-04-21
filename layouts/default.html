@@ -1,28 +1,41 @@
 <!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>The Tachypomp and Other Stories- <%= @item[:title] %></title>
-    <link rel="stylesheet" href="/style.css">
-
-    <!-- you don't need to keep this, but it's cool for stats! -->
-    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
-  </head>
-  <body>
-    <div id="main">
-      <%= yield %>
+<html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class='no-js' lang='en'><!--<![endif]-->
+<head>
+  <meta charset='utf-8'>
+  <meta content='width=device-width' name='viewport'>
+  <title>The Tachypomp and Other Stories - <%= @item[:title] %></title>
+  <link href='/assets/stylesheets/normalize.css' rel='stylesheet'>
+  <link href='/assets/stylesheets/app.css' rel='stylesheet'>
+  <script src='/assets/javascripts/foundation/vendor-custom-modernizr.js'></script>
+  <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+</head>
+<body>
+  <div class='row'>
+      <div class='large-12 columns'>
+        <h2><a href="/">The Tachypomp and Other Stories</a></h2>
+        <p>by Edward Page Mitchell</p>
+        <hr>
+      </div>
     </div>
-    <div id="sidebar">
-      <h2><a href="/">The Tachypomp and Other Stories</a></h2>
+  
+  <div class='row'>
+    <div class='large-8 columns'> 
+        <%= yield %>
+    </div>  
+    <div class='small-4 columns'>
+      <h2>Contents</h2>
       <ul>
         <%= render_toc %>
       </ul>
-      <h2>Details</h2>
+      <h2>About</h2>
       <ul>
-        <li><a href="http://github.com/ferrisoxide/tachypomp">Github Project</a></li>
-        <li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>
-        <li><a href="http://github.com/nanoc/nanoc/wiki/">Wiki</a></li>
+        <li><a href="http://github.com/ferrisoxide/tachypomp">Github project</a></li>
+        <li><a href="http://gutenberg.net.au/ebooks06/0602521h.html">Project Gutenberg site</a></li>
+        <!-- <li><a href="irc://chat.freenode.net/#nanoc">Site status</a></li> -->
       </ul>
     </div>
-  </body>
+  </div>
+</body>
 </html>

@@ -10,7 +10,7 @@ module TableOfContents
     toc_lines.each do |line|
       unless line.empty? || (line == "\r\n") # SMELL Windows line feed
         section_count += 1
-        result += "<li><a href='/section-#{section_count}'>#{line}</a></li>"
+        result += "<li><a href='/section-#{section_count}/'>#{line}</a></li>"
       end  
     end  
     result += '</ul>'
@@ -19,3 +19,21 @@ module TableOfContents
 end  
 
 include TableOfContents
+
+
+require 'nanoc/filters/javascript_concatenator'
+require 'compass'
+require 'zurb-foundation'
+#require 'faker'
+
+include Nanoc::Helpers::Blogging
+include Nanoc::Helpers::Tagging
+include Nanoc::Helpers::Rendering
+include Nanoc::Helpers::LinkTo
+include Nanoc::Helpers::XMLSitemap
+
+unless defined? LOADED_DEFAULT_CONFIG
+  LOADED_DEFAULT_CONFIG = true
+
+  Compass.add_project_configuration 'compass/config.rb'
+end
