@@ -2718,7 +2718,6 @@ turned away sobbing.
 
 A moment later the intense cold of the congealing chamber caught the
 bride and wrapped her close in its icy embrace.
-EOT
 
 *** section-6
 
@@ -3824,9 +3823,6 @@ I went back to my rooms in the Breede Straat, where my only companion
 was the silent clock.
 
 
-
 THE END
-
-EOT
 
 

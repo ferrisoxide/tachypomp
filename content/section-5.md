@@ -755,5 +755,4 @@ turned away sobbing.
 
 A moment later the intense cold of the congealing chamber caught the
 bride and wrapped her close in its icy embrace.
-EOT
 

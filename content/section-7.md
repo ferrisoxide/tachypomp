@@ -562,9 +562,6 @@ I went back to my rooms in the Breede Straat, where my only companion
 was the silent clock.
 
 
-
 THE END
-
-EOT
 
 
