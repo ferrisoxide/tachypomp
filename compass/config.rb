@@ -1,6 +1,9 @@
+require 'zurb-foundation'
+
+# Use compass install foundation -c compass/config.rb --force to reimport assets 
 http_path    = '/'
 project_path = '.'
-css_dir      = 'content/assets/stylesheets'
+#css_dir      = 'content/assets/stylesheets'
 sass_dir     = 'content/assets/stylesheets'
 images_dir   = 'content/assets/images'
 relative_assets = true

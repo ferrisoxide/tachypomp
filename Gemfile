@@ -4,9 +4,9 @@ gem 'nanoc'
 #gem 'maruku' # TODO check licence
 gem 'kramdown' # NOTE not using because of GPL
 gem 'systemu' # NOTE used when deploying via rsync
-#gem 'eeepub' # NOTE not using just yet
+gem 'eeepub' # NOTE not using just yet
 
-gem 'breakdown', :git => 'git@github.com:ferrisoxide/breakdown.git'
+gem 'breakdown'#, :git => 'git@github.com:ferrisoxide/breakdown.git', :branch => 'master'
 
 # Dependencies for local Web server
 gem 'adsf'
@@ -21,7 +21,7 @@ gem 'nanoc-image-compressor'
 gem 'nanoc-javascript-concatenator'
 
 # Zurb Foundation
-gem 'zurb-foundation', '~> 4.1.1'
+gem 'zurb-foundation'#, '~> 4.1.1'
 
 # Compass
 gem 'compass'

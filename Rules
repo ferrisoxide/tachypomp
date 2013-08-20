@@ -14,17 +14,28 @@
 #   because “*” matches zero or more characters.
 
 # Styling and Javascript Asset Rules
-compile '/assets/stylesheets/*/' do
-  filter :sass, Compass.sass_engine_options
+
+# Styling and Javascript Asset Rules
+require 'compass'
+
+unless defined? LOADED_DEFAULT_CONFIG
+  LOADED_DEFAULT_CONFIG = true
+  require 'compass'
+  Compass.add_project_configuration 'compass/config.rb' 
 end
 
-compile '/assets/javascripts/*' do
-  filter :erb
-  filter :concat_js
-  if ENV['NANOC_ENV'] == 'production'
-    filter :uglify_js
-  end
+compile '/assets/stylesheets/*' do
+  filter :sass, Compass.sass_engine_options.merge(:syntax => item[:extension].to_sym)
 end
+
+# NOTE Don't worry about compiling javascripts for now 
+# compile '/assets/javascripts/*' do
+#   filter :erb
+#   filter :concat_js
+#   if ENV['NANOC_ENV'] == 'production'
+#     filter :uglify_js
+#   end
+# end
 
 ## Do not write partials
 route '/assets/stylesheets/_*/' do
@@ -33,6 +44,10 @@ end
 
 route '/assets/stylesheets/*/' do
   item.identifier.chop + '.css'
+end
+
+route '/assets/stylesheets/*/', :rep => :epub do
+  # Don't build assets for epub
 end
 
 route '/assets/javascripts/*' do
@@ -49,6 +64,16 @@ compile '*' do
   end
 end
 
+compile '*', :rep => :epub do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    filter :kramdown
+    layout 'epub'
+  end
+end
+
 route '/stylesheet/' do
   '/style.css'
 end
@@ -61,6 +86,18 @@ route '*' do
     # Write item with identifier /foo/ to /foo/index.html
     item.identifier + 'index.html'
   end
+end
+
+route '*', :rep => :epub do
+  if item.binary?
+    # Don't build binary items
+  else  
+    unless item[:exclude_from_epub]   
+      item_identifier = item.identifier.chop
+      item_identifier = '/index' if item_identifier.empty?     
+      '/epub' + item_identifier + '.xhtml'
+    end
+  end  
 end
 
 layout '*', :erb

@@ -13,3 +13,5 @@ nanoc.yaml
 .DS_Store
 crash.log
 nanoc.yaml
+
+.sass-cache/

@@ -43,7 +43,7 @@ THE SENATOR'S DAUGHTER
 THE CRYSTAL MAN
 THE CLOCK THAT WENT BACKWARD
 
-*** section-1
+*** :autonum section
 
 THE TACHYPOMP
 
@@ -677,7 +677,7 @@ husband."
 Still I can see no reason why the Tachypomp should not have succeeded.
 Can you?
 
-*** section-2
+*** :autonum section
 
 THE SOUL SPECTROSCOPE
 
@@ -888,7 +888,7 @@ Having bid the professor farewell and wished him abundant success in
 his very interesting experiments, I went home and read again for the
 thirty-ninth time Professor Tyndall's address at Belfast.
 
-*** section-3
+*** :autonum section
 
 THE MAN WITHOUT A BODY
 
@@ -1200,7 +1200,7 @@ issued forth from the old arsenal into the fresh night air and the
 moonlight, and wandered arm in arm along the shores of the quiet lake
 and through the mazy paths of the Ramble.
 
-*** section-4
+*** :autonum section
 
 THE ABLEST MAN IN THE WORLD
 
@@ -1960,7 +1960,7 @@ the Baron Savitch."
 Miss Ward burst into a ringing laugh. "You are sometimes too droll,
 Mr. Fisher," she said.
 
-*** section-5
+*** :autonum section
 
 THE SENATOR'S DAUGHTER
 
@@ -2719,7 +2719,7 @@ turned away sobbing.
 A moment later the intense cold of the congealing chamber caught the
 bride and wrapped her close in its icy embrace.
 
-*** section-6
+*** :autonum section
 
 THE CRYSTAL MAN
 
@@ -3258,7 +3258,7 @@ spring. He clutched, missed, and fell back with a cry of horror.
 
 There was a dull splash in the black waters of the river at our feet.
 
-*** section-7
+*** :autonum section
 
 THE CLOCK THAT WENT BACKWARD
 
