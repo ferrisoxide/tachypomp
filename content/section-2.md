@@ -1,3 +1,6 @@
+---
+title: "THE SOUL SPECTROSCOPE"
+---
 
 THE SOUL SPECTROSCOPE
 

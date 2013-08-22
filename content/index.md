@@ -1,3 +1,6 @@
+---
+title: "| Title | The Tachypomp and Other Stories |"
+---
 | Title | The Tachypomp and Other Stories | 
 | Author | Edward Page Mitchell |
 

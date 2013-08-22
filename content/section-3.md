@@ -1,3 +1,6 @@
+---
+title: "THE MAN WITHOUT A BODY"
+---
 
 THE MAN WITHOUT A BODY
 

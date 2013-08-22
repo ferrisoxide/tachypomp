@@ -14,50 +14,59 @@ run do |opts, args, cmd|
   ROOT = File.join(File.dirname(__FILE__), '..')
   
   nanoc_config = YAML.load(File.read(File.join(ROOT, 'nanoc.yaml')))
-  epub_config = YAML.load(File.read(File.join(ROOT, 'epub.yaml')))
+  ebook_config = YAML.load(File.read(File.join(ROOT, 'ebook.yaml')))
+  book_contents = JSON.load(File.read(File.join(nanoc_config['output_dir'], 'book.json')))
   
-  META = epub_config['meta']
-  
+  meta_data = ebook_config['meta']
   
   epub_dir = File.join(nanoc_config['output_dir'], 'epub')
     
   epub = EeePub.make do
-    title       META['title']
-    creator     META['creator']
-    publisher   META['publisher']
-    date        META['date']
-    identifier  META['identifier']['url'], :scheme => 'URL', :id => META['identifier']['id']  
-    uid         META['uid']
-
-    OUTLINE = YAML.load(File.read(File.join(ROOT, 'tmp', 'outline.yaml')))
+    title       meta_data['title']
+    creator     meta_data['creator']
+    publisher   meta_data['publisher']
+    date        meta_data['date']
+    identifier  meta_data['identifier']['url'], :scheme => 'URL', :id => meta_data['identifier']['id']  
+    uid         meta_data['uid']
     
     file_list = []
     nav_list = []
     
-    chapters = OUTLINE.keys.sort
-    chapters.each do |chapter| 
-      nav_pages = []
+    puts '++++'
+
+    
+    book_contents['contents'].each do |file|
+      file_name = "#{file}.xhtml"
+      file_list << File.join(epub_dir, file_name)
+      nav_list << {:label => file, :content => File.basename(file_name) }  
+    end  
       
-      pages = OUTLINE[chapter].keys.sort
-      nav_pages = pages.each.collect do |page| 
-        page =  OUTLINE[chapter][page] 
-        
-        file = File.join(epub_dir, page[:file])
-        file_list << file
-        {:label => "#{page[:label]}", :content => File.basename(file) }  
-      end  
       
-      nav_list << nav_pages
-    end
+    
+    # chapters = OUTLINE.keys.sort
+    # chapters.each do |chapter| 
+    #   nav_pages = []
+    #   
+    #   pages = OUTLINE[chapter].keys.sort
+    #   nav_pages = pages.each.collect do |page| 
+    #     page =  OUTLINE[chapter][page] 
+    #     
+    #     file = File.join(epub_dir, page[:file])
+    #     file_list << file
+    #     {:label => "#{page[:label]}", :content => File.basename(file) }  
+    #   end  
+    #   
+    #   nav_list << nav_pages
+    # end
     
     files file_list 
     nav nav_list
   end
   
   FileUtils.mkdir_p(File.join(ROOT, 'output', 'epub', 'book'))
-  epub_filename = File.join(ROOT, 'output', 'epub', 'book', 'this-purple-world.epub')
+  epub_filename = File.join(ROOT, 'output', 'epub', 'book', 'tachypomp.epub')
   epub.save(epub_filename)
-  #FileUtils.rm_rf(epub_dir) # remove epub XHTML files created by nanoc
+#  FileUtils.rm_rf(epub_dir) # remove epub XHTML files created by nanoc
   
   puts "epub saved to #{epub_filename}"
 end

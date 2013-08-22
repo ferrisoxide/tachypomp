@@ -1,3 +1,6 @@
+---
+title: "THE SENATOR'S DAUGHTER"
+---
 
 THE SENATOR'S DAUGHTER
 

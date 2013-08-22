@@ -3,7 +3,7 @@ GEM
   specs:
     adsf (1.1.1)
       rack (>= 1.0.0)
-    breakdown (0.1.1)
+    breakdown (0.1.2)
     builder (3.2.2)
     chunky_png (1.2.8)
     colored (1.2)

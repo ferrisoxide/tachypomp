@@ -1,3 +1,6 @@
+---
+title: "THE ABLEST MAN IN THE WORLD"
+---
 
 THE ABLEST MAN IN THE WORLD
 
