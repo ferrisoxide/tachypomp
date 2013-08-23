@@ -31,33 +31,13 @@ run do |opts, args, cmd|
     
     file_list = []
     nav_list = []
-    
-    puts '++++'
 
-    
     book_contents['contents'].each do |file|
       file_name = "#{file}.xhtml"
       file_list << File.join(epub_dir, file_name)
       nav_list << {:label => file, :content => File.basename(file_name) }  
     end  
       
-      
-    
-    # chapters = OUTLINE.keys.sort
-    # chapters.each do |chapter| 
-    #   nav_pages = []
-    #   
-    #   pages = OUTLINE[chapter].keys.sort
-    #   nav_pages = pages.each.collect do |page| 
-    #     page =  OUTLINE[chapter][page] 
-    #     
-    #     file = File.join(epub_dir, page[:file])
-    #     file_list << file
-    #     {:label => "#{page[:label]}", :content => File.basename(file) }  
-    #   end  
-    #   
-    #   nav_list << nav_pages
-    # end
     
     files file_list 
     nav nav_list
