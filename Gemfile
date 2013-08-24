@@ -1,12 +1,16 @@
 source "http://rubygems.org"
 
 gem 'nanoc'
+gem 'guard-nanoc'
 #gem 'maruku' # TODO check licence
 gem 'kramdown' # NOTE not using because of GPL
 gem 'systemu' # NOTE used when deploying via rsync
-gem 'eeepub' # NOTE not using just yet
 
-gem 'breakdown'#, :git => 'git@github.com:ferrisoxide/breakdown.git', :branch => 'master'
+gem 'guard-process'
+
+gem 'eeepub' 
+
+gem 'breakdown'
 
 # Dependencies for local Web server
 gem 'adsf'

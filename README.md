@@ -37,4 +37,5 @@ TO DO
 * Add support for hPub
 * Add support for PDF (maybe)
 * Simplify the configuration
+* Improve the 'guard' watch for the source text file
 
