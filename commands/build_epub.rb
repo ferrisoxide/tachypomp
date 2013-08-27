@@ -22,12 +22,14 @@ run do |opts, args, cmd|
   epub_dir = File.join(nanoc_config['output_dir'], 'epub')
     
   epub = EeePub.make do
-    title       meta_data['title']
-    creator     meta_data['creator']
-    publisher   meta_data['publisher']
-    date        meta_data['date']
-    identifier  meta_data['identifier']['url'], :scheme => 'URL', :id => meta_data['identifier']['id']  
-    uid         meta_data['uid']
+    title       ebook_config['meta']['title']
+    creator     ebook_config['meta']['creator']
+    publisher   ebook_config['meta']['publisher']
+    date        ebook_config['meta']['date']
+    identifier  ebook_config['epub']['identifier']['url'], 
+                  :scheme => 'URL', 
+                  :id => ebook_config['epub']['identifier']['id']  
+    uid         ebook_config['epub']['uid']
     
     file_list = []
     nav_list = []

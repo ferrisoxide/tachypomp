@@ -14,8 +14,6 @@
 #   because “*” matches zero or more characters.
 
 # Styling and Javascript Asset Rules
-
-# Styling and Javascript Asset Rules
 require 'compass'
 
 unless defined? LOADED_DEFAULT_CONFIG
@@ -46,9 +44,17 @@ route '/assets/stylesheets/*/' do
   item.identifier.chop + '.css'
 end
 
+# NOTE Both hpub and epub formats will eventually have their own style sheets. In 
+# the case of hpub, specific javascript files may also be included
+ 
 route '/assets/stylesheets/*/', :rep => :epub do
   # Don't build assets for epub
 end
+
+route '/assets/stylesheets/*/', :rep => :hpub do
+  # Don't build assets for hpub 
+end
+
 
 # Ignoring javascripts for now (have been removed from /assets)
 # route '/assets/javascripts/*' do
@@ -75,9 +81,18 @@ compile '*', :rep => :epub do
   end
 end
 
-route '/stylesheet/' do
-  '/style.css'
+compile '*', :rep => :hpub do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    filter :kramdown
+    layout 'hpub'
+  end
 end
+# route '/stylesheet/' do
+#   '/style.css'
+# end
 
 route '*' do
   if item.binary?
@@ -93,11 +108,19 @@ route '*', :rep => :epub do
   if item.binary?
     # Don't build binary items
   else  
-    unless item[:exclude_from_epub]   
-      item_identifier = item.identifier.chop
-      item_identifier = '/index' if item_identifier.empty?     
-      '/epub' + item_identifier + '.xhtml'
-    end
+    item_identifier = item.identifier.chop
+    item_identifier = '/index' if item_identifier.empty?     
+    '/epub' + item_identifier + '.xhtml'
+  end  
+end
+
+route '*', :rep => :epub do
+  if item.binary?
+    # Don't build binary items
+  else   
+    item_identifier = item.identifier.chop
+    item_identifier = '/index' if item_identifier.empty?     
+    '/epub' + item_identifier + '.html'
   end  
 end
 

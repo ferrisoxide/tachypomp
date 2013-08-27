@@ -42,7 +42,7 @@ run do |opts, args, cmd|
   
   # Build eBook data, based on hPub format
   output_filename = './content/book.json'
-  File.open(output_filename, 'w') { |file| file.write book.to_json }
+  File.open(output_filename, 'w') { |file| file.write JSON.pretty_generate(book) }
   
 end
 
