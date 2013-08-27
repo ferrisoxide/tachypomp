@@ -23,7 +23,7 @@ run do |opts, args, cmd|
     
   epub = EeePub.make do
     title       ebook_config['meta']['title']
-    creator     ebook_config['meta']['creator']
+    creator     ebook_config['meta']['creator'] # SMELL need to check epub spec
     publisher   ebook_config['meta']['publisher']
     date        ebook_config['meta']['date']
     identifier  ebook_config['epub']['identifier']['url'], 

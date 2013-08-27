@@ -114,13 +114,13 @@ route '*', :rep => :epub do
   end  
 end
 
-route '*', :rep => :epub do
+route '*', :rep => :hpub do
   if item.binary?
     # Don't build binary items
   else   
     item_identifier = item.identifier.chop
     item_identifier = '/index' if item_identifier.empty?     
-    '/epub' + item_identifier + '.html'
+    '/hpub' + item_identifier + '.html'
   end  
 end
 
