@@ -11,18 +11,17 @@ flag   :h, :help,  'show help for this command' do |value, cmd|
 end
 
 run do |opts, args, cmd|
-  ROOT = File.join(File.dirname(__FILE__), '..')
   
-  nanoc_config = YAML.load(File.read(File.join(ROOT, 'nanoc.yaml')))
-  ebook_config = YAML.load(File.read(File.join(ROOT, 'ebook.yaml')))
+  raise 'nanoc.yaml configuration file not found.' unless File.exists?('nanoc.yaml')
+  raise 'ebook.yaml configuration file not found.' unless File.exists?('ebook.yaml')
+    
+  nanoc_config = YAML.load(File.read('nanoc.yaml'))
+  ebook_config = YAML.load(File.read('ebook.yaml'))
   
-  raise 'nanoc.yaml configuration file not found.' unless File.exists?('./nanoc.yaml')
-  raise 'ebook.yaml configuration file not found.' unless File.exists?('./ebook.yaml')
-  
-  nanoc_config = YAML.load(File.open('./nanoc.yaml'))
-  ebook_config = YAML.load(File.open('./ebook.yaml'))
-
-  book_contents = JSON.load(File.read(File.join('./', nanoc_config['output_dir'], 'book.json')))
+  book_contents_filename = File.join(nanoc_config['output_dir'], 'book.json')
+  raise "#{book_contents_filename} not found. Have you run nanoc compile?" unless File.exists?(book_contents_filename)
+ 
+  book_contents = JSON.load(File.read(book_contents_filename))
   
   puts "Building ePub"
   EPubBuilder::build(nanoc_config, ebook_config, book_contents)
@@ -62,7 +61,6 @@ class EPubBuilder
     FileUtils.mkdir_p(File.join(nanoc_config['output_dir'], 'epub', 'book'))
     epub_filename = File.join(nanoc_config['output_dir'], 'epub', 'book', 'tachypomp.epub')
     epub.save(epub_filename)
-  #  FileUtils.rm_rf(epub_dir) # remove epub XHTML files created by nanoc
 
     puts "epub saved to #{epub_filename}"
   end      
@@ -89,7 +87,6 @@ class HPubBuilder
     end
   
     book[:contents] = file_list
-  
   
     # Build eBook data, based on hPub format
     output_filename = File.join(hpub_dir, 'book.json')
