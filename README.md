@@ -15,10 +15,12 @@ Installation
 
 Clone the project into your local filesystem: 
 
-`git clone git@github.com:ferrisoxide/tachypomp.git`
-`cd tachypomp`
-`cp nanoc.yaml.example nanoc.yaml`
-`bundle install`
+```
+git clone git@github.com:ferrisoxide/tachypomp.git
+cd tachypomp
+cp nanoc.yaml.example nanoc.yaml
+bundle install
+```
 
 The project assumes Ruby 1.9.3 is installed and will use RVM if available.
 
