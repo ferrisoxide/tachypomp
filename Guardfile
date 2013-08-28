@@ -7,8 +7,10 @@ guard 'nanoc' do
   watch(%r{^(content|layouts|lib)/.*$})
 end
 
+
 # A 'cheat' approach to getting nanoc to import on changes to source text file
 # TODO replace with a more succinct mechanism once I understand the guard gem better
-guard 'process', :name => 'ImportSource', :command => 'nanoc import --filename the-tachypomp-and-other-stories.md' do
-  watch('the-tachypomp-and-other-stories.md')
+guard 'process', :name => 'ImportSource', :command => 'nanoc import' do
+  ebook_config = YAML.load './ebook.yaml'
+  watch(ebook_config['source'])
 end
