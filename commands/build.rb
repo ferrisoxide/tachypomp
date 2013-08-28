@@ -15,7 +15,14 @@ run do |opts, args, cmd|
   
   nanoc_config = YAML.load(File.read(File.join(ROOT, 'nanoc.yaml')))
   ebook_config = YAML.load(File.read(File.join(ROOT, 'ebook.yaml')))
-  book_contents = JSON.load(File.read(File.join(nanoc_config['output_dir'], 'book.json')))
+  
+  raise 'nanoc.yaml configuration file not found.' unless File.exists?('./nanoc.yaml')
+  raise 'ebook.yaml configuration file not found.' unless File.exists?('./ebook.yaml')
+  
+  nanoc_config = YAML.load(File.open('./nanoc.yaml'))
+  ebook_config = YAML.load(File.open('./ebook.yaml'))
+
+  book_contents = JSON.load(File.read(File.join('./', nanoc_config['output_dir'], 'book.json')))
   
   puts "Building ePub"
   EPubBuilder::build(nanoc_config, ebook_config, book_contents)
@@ -52,8 +59,8 @@ class EPubBuilder
       nav nav_list
     end
 
-    FileUtils.mkdir_p(File.join(ROOT, 'output', 'epub', 'book'))
-    epub_filename = File.join(ROOT, 'output', 'epub', 'book', 'tachypomp.epub')
+    FileUtils.mkdir_p(File.join(nanoc_config['output_dir'], 'epub', 'book'))
+    epub_filename = File.join(nanoc_config['output_dir'], 'epub', 'book', 'tachypomp.epub')
     epub.save(epub_filename)
   #  FileUtils.rm_rf(epub_dir) # remove epub XHTML files created by nanoc
 
