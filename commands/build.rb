@@ -13,8 +13,8 @@ end
 run do |opts, args, cmd|
   ROOT = File.join(File.dirname(__FILE__), '..')
   
-  nanoc_config = YAML.load(File.read(File.join(ROOT, 'nanoc.yaml')))
-  ebook_config = YAML.load(File.read(File.join(ROOT, 'ebook.yaml')))
+  nanoc_config = YAML.load('./nanoc.yaml')))
+  ebook_config = YAML.load('./ebook.yaml')))
   book_contents = JSON.load(File.read(File.join(nanoc_config['output_dir'], 'book.json')))
   
   puts "Building ePub"
@@ -55,7 +55,6 @@ class EPubBuilder
     FileUtils.mkdir_p(File.join(ROOT, 'output', 'epub', 'book'))
     epub_filename = File.join(ROOT, 'output', 'epub', 'book', 'tachypomp.epub')
     epub.save(epub_filename)
-  #  FileUtils.rm_rf(epub_dir) # remove epub XHTML files created by nanoc
 
     puts "epub saved to #{epub_filename}"
   end      
