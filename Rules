@@ -125,28 +125,3 @@ route '*', :rep => :hpub do
 end
 
 layout '*', :erb
-
-# NOTE The preprocess code needs to be rewritten, maybe even removed in favour of the block code used in importing
-# preprocess do
-#   outline = {}
-#   
-#   # build outline
-#   @items.each do |item|
-#     unless item[:exclude_from_epub]
-#       chapter = item[:chapter]
-#       page = item[:page]
-#       title = item[:title]
-#     
-#       if chapter
-#         outline[chapter] = {} unless outline[chapter]
-#         outline[chapter][page] = {
-#           :label => item[:title], 
-#           :file => item.identifier.gsub(/^\/|\/$/, '') + '.html' } 
-#       end    
-#     end  
-#   end
-#   
-#   File.open("tmp/outline.yaml", "w") {|file| file.write outline.to_yaml }
-#   
-#   # TODO: build HTML outline
-# end

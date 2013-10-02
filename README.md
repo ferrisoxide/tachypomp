@@ -5,7 +5,7 @@ This project is a conversion of the 'The Tachypomp and Other Stories' into a nan
 "proof of concept" to demonstrate publishing an ebook in a variety of formats using nanoc. The project currently 
 generates content in both ePub, hPub and HTML (for online viewing) formats.   
 
-NB: The original text was sourced from the Gutenberg Project. The source file has been resaved in UTF-8 format to remove invalid multibyte char (UTF-8), as the source file from the Gutenberg Project came with Latin-1 encoding.
+NB: The original text was sourced from the Gutenberg Project. The source file has been re-saved in UTF-8 format to remove invalid multibyte char (UTF-8), as the source file from the Gutenberg Project came with Latin-1 encoding.
 
 This project is still very much a work in progress. The long-term goal is to develop a general-purpose framework for
 building content in a variety of formats.
@@ -47,6 +47,17 @@ Once the content is compiled it can be packaged into different formats. Currentl
 `nanoc build`
 
 This will build ePub and hPub compatible files in _/output/epub/book_ and _/output/hpub_ respectively.
+
+Building hPub Book
+---
+
+Download the Backer Framework (http://bakerframework.com/). NB: you must have a recent version of XCode installed. 
+
+Copy the _/output/hpub/_ folder from the Tachypomp project into the _/Baker Framework [version]/books/_ folder, overwriting the existing _/book_ folder.
+
+Open the _/Baker Framework [version]/Baker.xcodeproj file in XCode and build it. You should be able to run the book as an app within an iPad simulator.
+
+Alternatively, if you are not using OS X, you might want to look at the Friar Framework (http://www.friarframework.com/), a port of the Baker Framework to Android. I haven't tried this myself, but in theory the generated content should be compatible.
 
 TO DO
 ---
