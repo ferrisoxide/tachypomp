@@ -58,8 +58,8 @@ class EPubBuilder
       nav nav_list
     end
 
-    FileUtils.mkdir_p(File.join(nanoc_config['output_dir'], 'epub', 'book'))
-    epub_filename = File.join(nanoc_config['output_dir'], 'epub', 'book', 'tachypomp.epub')
+    FileUtils.mkdir_p(File.join(nanoc_config['output_dir'], 'ebook'))
+    epub_filename = File.join(nanoc_config['output_dir'], 'ebook', 'tachypomp.epub')
     epub.save(epub_filename)
   #  FileUtils.rm_rf(epub_dir) # remove epub XHTML files created by nanoc
 
@@ -93,5 +93,23 @@ class HPubBuilder
     output_filename = File.join(hpub_dir, 'book.json')
     File.open(output_filename, 'w') { |file| file.write JSON.pretty_generate(book) }
     puts "hPub saved to /#{hpub_dir}"
+    
+    # Build a zip file of hPub contents
+    # NOTE Rubyzip version pulled in by eeePub gem. More recent version use "require 'zip'" and 
+    # different methods than used here.
+    require 'zip/zip' 
+    
+    FileUtils.mkdir_p(File.join(nanoc_config['output_dir'], 'ebook'))
+    hpub_zip_filename = File.join('.', nanoc_config['output_dir'], 'ebook', 'tachypomp_hpub.zip')
+    
+    FileUtils.rm(hpub_zip_filename) if File.exists?(hpub_zip_filename)
+   
+    Zip::ZipFile.open(hpub_zip_filename, Zip::ZipFile::CREATE) do |zipfile|
+      Dir[File.join(hpub_dir, '**', '**')].each do |file|
+        zipfile.add(file.sub(hpub_dir + '/', ''), file)
+      end
+    end
+    
+    puts "hPub zip file saved to #{hpub_zip_filename}"
   end  
 end  
