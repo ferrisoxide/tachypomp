@@ -7,8 +7,6 @@ output/
 tmp/
 
 # Configuration file, see nanoc.yaml.example
-nanoc.yaml
-
 
 .DS_Store
 crash.log
