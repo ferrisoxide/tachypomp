@@ -8,6 +8,7 @@ gem 'systemu' # NOTE used when deploying via rsync
 
 gem 'guard-process'
 
+gem 'rubyzip', '= 0.9.9' # SMELL dependency on earlier version of rubyzip in eeepub 
 gem 'eeepub' 
 
 gem 'breakdown'

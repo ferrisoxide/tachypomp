@@ -94,6 +94,7 @@ DEPENDENCIES
   nanoc-javascript-concatenator
   rack
   rack-rewrite
+  rubyzip (= 0.9.9)
   sass
   systemu
   zurb-foundation
