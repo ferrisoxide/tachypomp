@@ -3,7 +3,7 @@
 
 *A Project Gutenberg of Australia eBook*
 
-|  | |
+
 | --------- | ----------- |
 | eBook No. | 0602521.txt |
 | Edition | 1 |

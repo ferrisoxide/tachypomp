@@ -1,9 +1,10 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem "middleman", "~> 3.3.2"
+gem "middleman", "~> 3.4.0"
 gem "middleman-syntax"
+gem 'middleman-deploy', '~> 1.0'
 gem "redcarpet" # For github-flavored markdown
 gem "middleman-navtree"
 gem "titleize", "~> 1.3.0" # For title-casing things
