@@ -1,70 +1,112 @@
-README
-=====
+# Franklin
 
-This project is a conversion of the 'The Tachypomp and Other Stories' into a nanoc application. It serves as a
-"proof of concept" to demonstrate publishing an ebook in a variety of formats using nanoc. The project currently 
-generates content in both ePub, hPub and HTML (for online viewing) formats.   
+Franklin is a static-site framework, optimized for online books.
 
-NB: The original text was sourced from the Gutenberg Project. The source file has been re-saved in UTF-8 format to remove invalid multibyte char (UTF-8), as the source file from the Gutenberg Project came with Latin-1 encoding.
+![Franklin Logo](http://bitbooks.cc/images/franklin.png)
 
-This project is still very much a work in progress. The long-term goal is to develop a general-purpose framework for
-building content in a variety of formats.
+## Setup
 
-Installation
----
+Franklin is built on top of [Middleman](http://middlemanapp.com/), a fantastic static site generator written in Ruby. The setup steps are as follows:
 
-Clone the project into your local filesystem: 
+**1) Install Dependencies**
+
+Ensure that you have the following installed:
+* Ruby (comes pre-installed on Mac)
+* Rubygems (comes pre-installed on Mac)
+* Bundler (see http://bundler.io for installation instructions)
+
+**2) Install Middleman**
+
+```bash
+# Run the following commands in the console
+gem install middleman
+```
+
+For more detailed instructions, see http://middlemanapp.com/basics/getting-started/.
+
+**3) Download this project, and place it in your ~/.middleman directory:**
+
+```bash
+# If you have git installed...
+git clone git@github.com:bryanbraun/franklin.git ~/.middleman/franklin
+```
+
+If you don't have [git](http://git-scm.com/) installed, you can manually [download franklin](https://github.com/bryanbraun/franklin/archive/master.zip), unzip it, and drop it into your `~/.middleman` folder.
+
+**4) Create your project:**
+
+```bash
+# Replace 'mysite' with the name of your project
+middleman init mysite --template=franklin
+cd mysite
+bundle install  # Installs any franklin-specific gems.
+```
+
+## Basic Usage
+
+The most basic purpose of Franklin is to convert a stack of markdown files into an HTML site, and to do it in a way that is optimized for books.
+
+Your markdown files go into the "source" folder. They can be named anything (`xxxxxxxx.md`), except you must have a file named `index.md` to serve as the front page of your book. Franklin starts you out with some example files, which you can change or remove to suit your needs.
+
+The structure of your book, as given in the Table of Contents, will mimic the structure of the markdown files in the source directory. Notably:
+
+1. Your front page (`index.md`) will be promoted to the top of the list.
+2. Your readme (`readme.md`) file will not appear in your table of contents. (For guidence on how to exclude other items from the Table of Contents, see the README for the [Middleman-Navtree](https://github.com/bryanbraun/middleman-navtree) gem).
+
+When you are ready to build your site, run the following command:
+```bash
+# This creates a `build` folder, containing your site, converted into static HTML.
+bundle exec middleman build
+```
+Using Middleman's customization options, you can do all sorts of interesting things beyond this basic use-case. For details, see the [Middleman documentation](http://middlemanapp.com/).
+
+## Configuration
+
+Your book configuration is written in YAML and kept in /data/book.yml. This is where you can change the author, title, and other book information. The available parameters are (with example values):
+
+```yaml
+title: Example Book
+author: You
+github_url: https://github.com/yourname/example-book
+domain: http://yourname.github.io/example-book
+license_name: Attribution-ShareAlike
+license_url: https://creativecommons.org/licenses/by-sa/4.0
+theme: glide
+```
+
+## Themes
+
+Themes can be found in the `source/themes` directory. You can use your own theme by adding it to the `themes` folder and changing the value in `/data/book.yml` like so:
+
+```yaml
+theme: theme-name
+```
+
+Any theme you add must have the following structure:
 
 ```
-git clone git@github.com:ferrisoxide/tachypomp.git
-cd tachypomp
-cp nanoc.yaml.example nanoc.yaml
-bundle install
+theme_name
+  |
+  |--javascripts
+  |
+  |--layouts
+  |
+  `--stylesheets
 ```
 
-The project assumes Ruby 1.9.3 is installed and will use RVM if available.
+The main page layout is defined in `layouts/layout.erb`. For more details on working with layouts, see [Middleman's documentation](http://middlemanapp.com/basics/templates/#layouts).
 
-Importing Content
----
+## Contribution Guidelines
 
-The sample text "The Tachypomp and Other Stories" is a collection of short stories, written by Edward Page Mitchells. The source is maintained in a single text file to simplify editing. This is my preferred way of working with creative writing, but it's not the only way to publish via nanoc. You could just as easily maintain all your writing in a set of pages in the _/content_. I've done this in the past, but found it harder to edit or keep a track of where I was up to. 
+1. [Fork this project](https://github.com/bryanbraun/franklin/fork)
+2. Create a feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch to github (`git push origin my-new-feature`)
+5. Submit a Pull Request
 
-To import the source text, run the following from within the project's root folder:
+## Contributors
 
-`nanoc import`
+(If you are making a contribution, add your name here as part of your pull request)
 
-NB: The path to the source file is specified in the `ebook.yaml` file.
-
-This will generate content files by breaking the larger file into several smaller ones, using the `breakdown` gem. It will also create an `book.json` file in the _/content folder_. The `book.json` file is loosely based on the hPub ebook specification, and is used by other processes to build table of contents for alternative formats.
-
-Compiling Content
----
-
-The imported content will need to be compiled using nanoc: 
-
-`nanoc compile`
-
-Once the content is compiled it can be packaged into different formats. Currently only ePub 2 and hPub formats are supported. To package the ebook run the following:
-
-`nanoc build`
-
-This will build ePub and hPub compatible files in _/output/epub/book_ and _/output/hpub_ respectively.
-
-Building hPub Book
----
-
-Download the Backer Framework (http://bakerframework.com/). NB: you must have a recent version of XCode installed. 
-
-Copy the _/output/hpub/_ folder from the Tachypomp project into the _/Baker Framework [version]/books/_ folder, overwriting the existing _/book_ folder.
-
-Open the _/Baker Framework [version]/Baker.xcodeproj file in XCode and build it. You should be able to run the book as an app within an iPad simulator.
-
-Alternatively, if you are not using OS X, you might want to look at the Friar Framework (http://www.friarframework.com/), a port of the Baker Framework to Android. I haven't tried this myself, but in theory the generated content should be compatible.
-
-TO DO
----
-
-* Clean up the code (was a bit of a hack)
-* Add support for PDF (maybe)
-* Stylesheets for ePub and hPub versions
-
+## License
+[MIT](http://opensource.org/licenses/MIT)

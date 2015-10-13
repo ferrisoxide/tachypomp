@@ -1,15 +1,1 @@
-# For projects using nanoc (http://nanoc.stoneship.org/)
-
-# Default location for output, needs to match output_dir's value found in nanoc.yaml
-output/
-
-# Temporary file directory
-tmp/
-
-# Configuration file, see nanoc.yaml.example
-
-.DS_Store
-crash.log
-nanoc.yaml
-
-.sass-cache/
+/build

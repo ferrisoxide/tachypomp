@@ -1,37 +1,23 @@
-source "http://rubygems.org"
+# If you have OpenSSL installed, we recommend updating
+# the following line to use "https"
+source 'http://rubygems.org'
 
-gem 'nanoc'
-gem 'guard-nanoc'
-#gem 'maruku' # TODO check licence
-gem 'kramdown' # NOTE not using because of GPL
-gem 'systemu' # NOTE used when deploying via rsync
+gem "middleman", "~> 3.3.2"
+gem "middleman-syntax"
+gem "redcarpet" # For github-flavored markdown
+gem "middleman-navtree"
+gem "titleize", "~> 1.3.0" # For title-casing things
+# gem "middleman-linkswap" # Not including for now.
 
-gem 'guard-process'
+# For faster file watcher updates on Windows:
+gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
-gem 'rubyzip', '= 0.9.9' # SMELL dependency on earlier version of rubyzip in eeepub 
-gem 'eeepub' 
+group :development do
+  gem "middleman-livereload", "~> 3.1.0"
+  gem "pry"
+end
 
-gem 'breakdown'
-
-# Dependencies for local Web server
-gem 'adsf'
-gem 'mime-types'
-gem 'rack'
-
-# Dependency for XML Sitemap generation
-gem 'builder'
-
-# Third party nanoc addons
-gem 'nanoc-image-compressor'
-gem 'nanoc-javascript-concatenator'
-
-# Zurb Foundation
-gem 'zurb-foundation'#, '~> 4.1.1'
-
-# Compass
-gem 'compass'
-gem 'sass'
-
-# Rack for pow
-gem 'rack'
-gem 'rack-rewrite', :require => 'rack/rewrite'
+# Cross-templating language block fix for Ruby 1.8
+platforms :mri_18 do
+  gem "ruby18_source_location"
+end
